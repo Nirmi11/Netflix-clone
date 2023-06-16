@@ -1,0 +1,249 @@
+/* basic css */
+html,body{
+    background-color:#141414 ;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica,Arial,  sans-serif;
+}
+
+.container
+{
+     width: 100%;
+    max-width: 1242px; 
+    margin: 0 auto;
+   
+}
+*
+{
+    box-sizing: border-box;
+}
+/* x-axis ka scrollbar hatane ke liye */
+*::-webkit-scrollbar
+{
+    display: none;
+}
+/* header css */
+header
+{
+    background-color: transparent;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all ease 600ms ;
+}
+
+header .black-bg
+{
+    background-color: rgb(20,20,20);
+}
+.header-container
+{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.left-container,.right-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    
+}
+.header-brand
+{
+    max-width: 110px;
+}
+.main-nav
+{
+list-style: none;
+display: inline-flex;
+flex-direction: row;
+
+}
+.nav-item
+{
+    color: #999292;
+    margin-right: 20px;
+    opacity: .83;
+}
+.nav-item:hover
+{
+    color: white;
+}
+.right-container svg ,.right-container img{
+    margin-right: 36px;
+    cursor: pointer;
+}
+.right-container svg{
+    color: white;
+}
+.right-container img{
+    max-width: 40px;
+}
+/* header css */
+/* banner section css */
+.banner-section
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 98vh;
+    padding-top: 80px;
+    position :relative;
+
+}
+.banner_content
+{
+    display: flex;
+    flex-direction: column; 
+    padding-top: 70px;
+    
+   
+}
+.banner_title
+{
+    color: white;
+    font-size: 78px;
+    margin: 0;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    max-width:40%;
+
+}
+.banner_info
+{
+     margin-bottom: 14px;
+     font-size: 22px;
+     font-weight:700 ;
+     line-height: 1.5;
+     color: white;
+
+}
+.banner_overview
+{
+  font-size: 16.4px;
+  color:white ;
+  line-height: 1.3;
+  max-width:40%;
+  
+
+}
+.action-buttons-container
+{
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.action-button
+{border: none;
+    background-color: white;
+    padding: 8px 23px;
+    margin-right: 11px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    cursor:pointer ;
+}
+.action-button:last-child
+{background-color: rgba(109,109,110,0.7);
+ color: white;
+}
+.banner_fadebottom
+{
+    height:120px ;
+    background: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#141414);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+}
+
+/* banner section css */
+
+/* movies-section css */
+
+.movies-section
+{
+  margin: 41px 0;
+}
+
+.movies-section-heading
+{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.explore-nudge
+{
+    color: #54b9c5;
+    font-size: 12px;
+    display: none;
+}
+.movies-section-heading:hover .explore-nudge
+{
+    display:inline-block;
+}
+.movies-row
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;  
+     overflow-x: auto;  /* scroll */
+    overflow-y: hidden;
+
+}
+.movie-item
+{
+      width:245px;
+    object-fit: contain;
+    margin-right: 18px;
+    border-radius: 4px ;
+    position: relative;
+}
+.movies-item-img{
+    width: inherit;
+}
+.movie-item .iframe-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    border: none;
+    outline: none;
+}
+.movie-item:hover .iframe-wrap{
+    display: block;
+}
+.movies-item:hover
+{
+    transform: scale(1.3);
+     transition:transform linear 300ms; /* smooth zoom*/
+}
+
+/* movies-section css */
+
+/* RESPONSIVE CSS */
+/* 767 is for tablet if max width is 767px so */
+@media (max-width:767px){
+            .main-nav
+            {
+                display: none;
+            }
+            .banner_overview ,.banner_title
+            {
+                max-width:100% ;
+            }
+  }
